@@ -114,7 +114,7 @@ if __name__ == "__main__":
     # solvers = ['lbfgs', 'liblinear', 'newton-cg']
     batch_sizes = [100, 200, 400, 600]
 
-    ################ add tqdm here with update to end of print (https://pypi.org/project/tqdm/4.1.0/)
+    ################ add tqdm here (https://pypi.org/project/tqdm/4.1.0/)
     for max_iter in max_iters:
         for solver in solvers:
             for batch_size in batch_sizes:
@@ -135,6 +135,7 @@ if __name__ == "__main__":
                 accuracy = accuracy_score(true_labels, predicted_labels)
 
                 ######## Use TQDM to set description of max_iter, solver, batch_size, and accuracy
+                ######## Update TQDM counter here
                 ######## put max_iter, solver, batch_size, and accuracy to dictionary and append to list and save this list as spreadsheet
                 ######## Keep track of the best model here by evaluating accuracy
 
